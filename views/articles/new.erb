@@ -1,0 +1,23 @@
+<h1>Create A New Article</h1>
+
+<% if !errors.empty? %>
+  <ul>
+    <% errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<form action='new' method='POST'>
+  <label for="">Title</label>
+  <input type='Text' name='title' value="<%= params[:title] %>">
+
+  <label for="">URL</label>
+  <input type='Text' name='url' value="<%= params[:url] %>">
+
+  <label for="">Description</label>
+  <input type='Text' name='description' value="<%= params[:description] %>">
+
+  <button type='submit'>create article</button>
+</form>
+
